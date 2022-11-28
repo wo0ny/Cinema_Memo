@@ -1,0 +1,291 @@
+* {
+    margin: 10;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:rgba(255, 255, 255);
+}
+
+textarea{
+    float: left;
+    color: white;
+}
+
+#Div{
+    background: rgb(216, 216, 216);
+    width: 140px;
+}
+
+#check{
+    margin: right;
+}
+button {
+    float: right;
+    margin: 3px;
+    background-color: red;
+    border-radius: 5px 5px 5px 5px;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    padding: 6px 10px 6px 10px;
+}
+#back {
+    float: left;
+}
+
+
+#menu {
+    font:bold 16px "malgun gothic";
+    width: 600px;
+    height: 50px;
+    background: red;
+    color:white;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+    line-height: 47px;
+    border-radius: 5px 5px 5px 2px;
+
+}
+
+#menu > ul > li {
+    float:left;
+    width:140px;
+    position:relative;
+}
+#menu > ul > li > ul {
+    width: 140px;
+    display:none;
+    position: absolute;
+    font-size:14px;
+    background: red;
+    
+}
+#menu > ul > li:hover > ul {
+    display:block;
+    
+}
+
+img{
+    width: 125%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    }
+    #red {
+    color: red;
+    text-decoration-line: none;
+    font-size: 2.5em;
+}
+
+#links{
+    width: 60px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    border: none;
+}
+#dropbox1{
+            background: rgb(255, 255, 255) url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+            -moz-appearance: none; 
+            -webkit-appearance: none; 
+            appearance: none;
+            /* and then whatever styles you want*/
+            height: 30px; 
+            width: 100px;
+            padding: 5px;
+        }
+#dropbox2{
+            background: rgb(255, 255, 255) url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+            -moz-appearance: none; 
+            -webkit-appearance: none; 
+            appearance: none;
+            /* and then whatever styles you want*/
+            height: 30px; 
+            width: 100px;
+            padding: 5px;
+        }
+
+.rating .rate_radio {
+    position: relative;
+    display: inline-block;
+    z-index: 20;
+    opacity: 0.001;
+    width: 25px;
+    height: 30px;
+    background-color: red;
+    cursor: pointer;
+    vertical-align: top;
+    display: none;
+}
+.rating .rate_radio + label {
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
+    z-index: 10;
+    width: 25px;
+    height: 30px;
+    background-image: url('./img/starrate.png');
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    cursor: pointer;
+    background-color: red
+}
+.rating .rate_radio:checked + label {
+    background-color: yellow;
+}
+
+.box{
+    width: 740px;
+    height: 480px;
+    border: 1px solid;
+    padding: 10px;
+    display: block;
+    top: -21px;
+    left: 760px;
+    position: relative;
+}
+    
+
+#checkok {
+    margin: 3px;
+    background-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    border: 0px;
+    color: white;
+    font-size: 10px;
+    padding: 6px 10px 6px 10px;
+}
+#btn2 {
+    margin: 3px;
+    background-color: grey;
+    border-radius: 5px 5px 5px 5px;
+    border: 0px;
+    color: white;
+    font-size: 13px;
+    padding: 6px 10px 6px 10px;
+}
+
+#URL {
+    width: 120px; 
+    height: 30px;
+    background-color: rgb(108, 107, 107);
+    border-radius: 10px 10px 10px 10px;
+}
+
+#text {
+    width: 1500px; 
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(108, 107, 107);
+    border: 20px solid rgb(38, 37, 37);
+    border-radius: 10px 10px 10px 10px;
+}
+::placeholder {
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#movie {
+    width: 400px; 
+    height: 600px;
+    background-color: rgb(108, 107, 107);
+    border: 20px solid rgb(38, 37, 37);
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 100px;
+}
+
+
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    float: center;
+}
+
+.image-upload {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#chooseFile {
+    visibility: hidden;
+}
+
+.fileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fileInput {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px black;
+    width: 60%;
+    height: 30px;
+}
+
+
+
+#imgup{
+    text-align: left;
+    color: black;
+    float: right;
+    padding: 50px;
+    margin-left: 5%;
+    border-radius: 5px;
+    background-color: gray;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    width: 400px; 
+    height: 500px;
+    border: 20px solid rgb(38, 37, 37);
+    border-radius: 10px 10px 10px 10px;
+    top: -21px;
+    margin-right: 60px;
+
+}
+
+#fileName {
+    margin-left: 5px;
+
+}
+
+.buttonContainer {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: red;
+    color: black;
+    padding: 10px;
+    font-size: 13px;
+    cursor: default;
+    border-radius: 5px 5px 5px 5px;
+}
+.image-show {
+    width: 500px;
+    height: 500px;
+}

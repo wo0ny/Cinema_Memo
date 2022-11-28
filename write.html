@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Diary</title>
+    <link rel="stylesheet" href="dropdown.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button type="button" id="back" onclick="history.back()">취소</button>
+    <button type="button" onclick="location.href='mymemo_upload.html'">등록</button>
+    <br><br>
+    <hr>
+<div id="menu">
+    <ul>
+        <li><a href="#">글꼴</a>
+            <ul>
+                <li><a href="#">폰트</a></li>
+                <select id="dropbox1" onchange="FONT()">
+                    <option value="Arial">Arial</option>
+                    <option value="cursive">cursive</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+                
+                <li><a href="#">글씨 크기</a></li>
+                    <select id="dropbox2" onchange="Size()">
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                    </select>
+            </ul>
+        </li>
+        <li><a href="draw.html">그리기</a></li>
+        <li><a href="#">체크 리스트</a>
+            <ul>
+                <form name="form1">
+     <table cellpadding="0" cellspacing="0" style="cursor:pointer" onClick="multiSelect('OPEN')">
+       <tr>
+        <td align="center" width="200px" height="30px" style="font-size:15px;">체크 리스트</td>
+        <td><input type="button" value="▼" onclick="" style="background-color: white"></td>
+       </tr>
+     </table>
+
+     <div id="Div" style="position:absolute; visibility:hidden; background-color: red;">
+        <ul>
+            <li ><input type="radio" name="check" id="+"> 체크리스트 +</li>
+            <li ><input type="radio" name="check" id="-"> 체크리스트 -</li>
+        </ul>
+        <div style="padding-top:3px;text-align:right"><input type="button" id="checkok"value="확인" onClick="multiSelect('CLOSE')"></div>
+    </div>
+    </form>
+            </ul>
+        </li>
+        
+        <li><a href="#">별점</a>
+            <ul>
+                <div class="rating">
+                    <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
+                    <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
+                    <label for="rating1"><img src="starrate.png"></label>
+                    <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
+                    <label for="rating2"><img src="starrate.png"></label>
+                    <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" >
+                    <label for="rating3"><img src="starrate.png"></label>
+                    <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
+                    <label for="rating4"><img src="starrate.png"></label>
+                    <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
+                    <label for="rating5"><img src="starrate.png"></label>
+                </div>              
+            </ul>
+        </li>
+    </ul>
+</div>
+<hr><br>
+
+
+<input type="text" id="text" placeholder="제목을 입력하세요">
+<br><br><br>
+
+
+ <!--<input id="movie" name="movie" type="text">-->
+    <div class="input"  contentEditable="true" id="input">
+        <textarea id="movie" name="movie"></textarea>
+    <script>
+        const lines = ["행복한지 따져보는 건 우울해지는 지름길이야. -우리의 20세기", "넌 도전했고 도전에는 용기가 필요하지, 네가 자랑스럽구나. -리틀 미스 선샤인", "천재성은 인종은 없고 강인함에는 남녀가 없으며 용기에는 한계가 없다. -히든 피겨스",
+                        "치열하게 살던가, 죽기만을 기다리던가 -쇼생크 탈출", "단지 두려움 때문에 좋아하는 일을 포기하지 마. -씽", "사람과 사람의 관계가 시작되는 건, 서로 다름을 인정하는 것부터이다. -완벽한 타인", "경험은 나이가 들지 않아요, 경험은 결코 시대에 뒤떨어지지 않기 때문이죠. -인턴",
+                        "역경을 이겨내고 핀 꽃이 가장 아름다운 꽃이다. -뮬란", "내일은 내일의 해가 뜬다. -바람과 함꼐 사라지다.", "내 최고의 행운은 도박에서 이 배의 티켓을 딴 거야, 당신을 만났으니까. -타이타닉",
+                        "If we can't accept limitations, then we're no better than the bad guy -Iron Man", "With great power comes great responsibility. -Spiderman"];
+
+        document.getElementById("movie").placeholder = lines[Math.floor((Math.random() * 12))];
+    </script>
+
+
+ <aside id="imgup">
+    <form>
+        <div class="image-upload" id="image-upload">
+            <form method="post" enctype="multipart/form-data">
+                <div class="button" id="imgbtn">
+                    <label for="chooseFile">
+                        이미지 업로드
+                    </label>
+                </div>
+                <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+            </form>
+    
+            <div class="fileContainer">
+                <div class="fileInput">
+                    <p>파일 이름: </p>
+                    <p id="fileName"></p>
+                </div>
+                <div class="buttonContainer">
+                    <div class="submitButton" id="submitButton"><strong>확인</strong></div>
+                </div>
+            </div>        
+        <div class="image-show" id="image-show"></div>
+    </div>
+    </form>
+ </aside>
+
+ 
+ 
+   
+
+
+   
+
+
+
+<script src="font.js"></script>
+<script src="URL.js"></script>
+<script src="check.js"></script>
+<script src="img.js"></script>
+</body>
+</html>

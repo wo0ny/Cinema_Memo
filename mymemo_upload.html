@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cinema Diary</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+
+      #red {
+        color: red;
+        text-decoration-line: none;
+        font-size: 2.5em;
+      }
+      p {
+        font-size: 2em;
+        line-height: 45%;
+      }
+      img {
+        display: inline-block;
+        width: 300px;
+        height: 150px;
+      }
+      button {
+        float: right;
+        margin: 3px;
+        background-color: red;
+        border-radius: 5px 5px 5px 5px;
+        border: 0px;
+        color: white;
+        font-size: 15px;
+        padding: 6px 10px 6px 10px;
+      }
+      #btn {
+        margin: 10px;
+      }
+      div div {
+        display: inline-block;
+        margin: 13px;
+        float: left;
+        text-align: left;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        border: 1px solid white;
+        background-color: white;
+      }
+      div p {
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="navgation">
+      <div>
+        <nav>
+          <ul>
+            <br />
+            <a href="main_login.html" id="red">
+              <strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;영화 메모장</strong>
+            </a>
+            <button type="button" onclick="location.href='index.html'">
+              로그아웃
+            </button>
+            <button type="button" onclick="location.href='mymemo.html'">
+              OO님
+            </button>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <button id="btn" type="button" onclick="location.href='write.html'">
+      글쓰기
+    </button>
+    <br /><br /><br /><br /><br /><br />
+    <div>
+      <div>&emsp;&emsp;&emsp;&emsp;</div>
+      <div>
+        <img src="movie1.jpeg" onclick="location.href='memo1.html'" />
+        <p><strong>감정 컨트롤</strong></p>
+      </div>
+      <div>
+        <img src="movie2.jpeg" />
+        <p><strong>순수함</strong></p>
+      </div>
+      <div>
+        <img src="movie3.jpeg" />
+        <p><strong>소소한 행복</strong></p>
+      </div>
+      <div>
+        <img src="movie4.png" onclick="location.href='memo2.html'"/>
+        <p><strong>성장</strong></p>
+      </div>
+    </div>
+    <br />
+    <div></div>
+  </body>
+</html>
